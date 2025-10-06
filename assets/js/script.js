@@ -21,3 +21,4 @@ var flkty = new Flickity(elem, {
   friction: 0.9,
 });
 
+

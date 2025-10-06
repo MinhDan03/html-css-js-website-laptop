@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.container-login {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* position: relative; */
+  max-width: 430px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 999;
+}
+.form .top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.close {
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s;
+}
+.close:hover {
+  color: #ca6262;
+}
+.container-login .forms {
+  display: flex;
+  align-items: center;
+  height: 440px;
+  width: 200%;
+  transition: height 0.2s ease;
+}
+
+.container-login .form {
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  transition: margin-left 0.18s ease;
+}
+
+.container-login.active .login {
+  margin-left: -50%;
+  opacity: 0;
+  transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container-login .signup {
+  opacity: 0;
+  transition: opacity 0.09s ease;
+}
+.container-login.active .signup {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.container-login.active .forms {
+  height: 600px;
+}
+.container-login .form .title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #083660;
+}
+
+.form .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 50px;
+  background-color: #ef6b6b;
+  border-radius: 25px;
+}
+
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: #ef6b6b;
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+  color: #ef6b6b;
+}
+
+.input-field i.icon {
+  left: 0;
+}
+.input-field i.showHidePw {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.form .checkbox-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-content input {
+  margin-right: 10px;
+  accent-color: #ef6b6b;
+}
+
+.form .text {
+  color: #333;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  display: inline !important;
+}
+
+.form a.text {
+  color: #ef6b6b;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form .button {
+  margin-top: 35px;
+}
+
+.form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #ef6b6b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.button input:hover {
+  background-color: #083660;
+}
+
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}

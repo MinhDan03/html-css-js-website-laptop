@@ -7,12 +7,13 @@
     <!-- Reset Css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="/assets/img/favicon.ico"
+      href="./assets/img/favicon.ico"
     />
     <!-- Link Icons -->
     <link
@@ -26,6 +27,11 @@
     <link
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- ===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
   </head>
   <body>
@@ -51,7 +57,7 @@
             <span><i class="fa-solid fa-magnifying-glass"></i></span>
           </div>
           <div class="cta-header">
-            <div class="func">Đăng Nhập</div>
+            <button class="func" id="loginBtn">Đăng Nhập</button>
             <div class="vertical"></div>
             <div class="icons-header">
               <span><i class="fa-regular fa-heart"></i></span>
@@ -714,6 +720,128 @@
       </div>
     </footer>
     <!-- No CopyRight -->
+    <!-- Login -->
+    <div id="overlay"></div>
+    <div id="container-login" class="container-login">
+      <div class="forms">
+        <div class="form login">
+          <div class="top">
+            <span class="title">Đăng Nhập</span>
+            <span class="close">&times;</span>
+          </div>
+
+          <form action="#">
+            <div class="input-field">
+              <input
+                type="email"
+                placeholder="Nhập email..."
+                required
+                name="email-login"
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                name="password-login"
+                placeholder="Nhập password..."
+                class="password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck" />
+                <label for="logCheck" class="text">Nhớ mật khẩu</label>
+              </div>
+
+              <a href="#" class="text">Quên Mật Khẩu?</a>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Login" id="login-btn" />
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Không phải là thành viên?
+              <a href="#!" class="text signup-link">Đăng Ký Ngay</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form signup">
+          <span class="title">Đăng Ký</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Nhập tên..."
+                required
+                name="name-register"
+              />
+              <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="email"
+                placeholder="Nhập email..."
+                name="email-register"
+                required
+              />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                placeholder="Tạo mật khẩu..."
+                name="password-regis"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                placeholder="Xác nhận mật khẩu..."
+                name="password-regis-confirm"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="termCon" />
+                <label for="termCon" class="text"
+                  >Tôi đã chấp nhận tất cả các điều khoản và điều kiện</label
+                >
+              </div>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Signup" id="signup-btn" />
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Đã là thành viên?
+              <a href="#!" class="text login-link">Đăng Nhập Ngay</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="copy-right">
       Bản quyền 2024 – © Công ty TNHH&nbsp;
       <p>LAPTOPS.VN</p>
@@ -722,6 +850,7 @@
       <i class="fa-solid fa-angle-up"></i>
     </button>
   </body>
+  <script src="./assets/js/login.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/script2.js"></script>
