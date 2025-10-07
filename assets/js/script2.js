@@ -1,3 +1,5 @@
+// button to top: trở về header
+// chức năng header fixed khi cuộn trang
 let header = document.getElementById("myHeader");
 let sticky = header.offsetTop;
 let mybutton = document.getElementById("myBtn");

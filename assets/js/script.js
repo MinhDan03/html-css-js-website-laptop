@@ -1,3 +1,4 @@
+// Chạy Slide Show
 var elem = document.querySelector(".carousel");
 var flkty = new Flickity(elem, {
   // options
@@ -20,5 +21,3 @@ var flkty = new Flickity(elem, {
   parallax: 0,
   friction: 0.9,
 });
-
-
