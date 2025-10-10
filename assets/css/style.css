@@ -134,12 +134,16 @@ button {
   display: flex;
   align-items: center;
 }
-.icons-header span i {
+.icons-header a i {
   font-size: 2.5rem;
   cursor: pointer;
   transition: all 0.2s;
+  color: #000;
 }
-.icons-header span i:hover {
+.icons-header a.active i {
+  color: #ef6b6b;
+}
+.icons-header a i:hover {
   color: #ca6262;
 }
 /* Navbar */
@@ -1427,4 +1431,275 @@ span {
 }
 .gg-map {
   margin: 40px 0;
+}
+/* Shopping cart */
+.shopping-cart {
+  background: #f1f1f1;
+  padding: 20px 0;
+}
+.shopping-inner {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 30px;
+}
+.shopping-right {
+  margin-top: 64px;
+}
+.cart-table {
+  width: 100%;
+  border-collapse: collapse; /* Gộp các đường viền lại */
+  background: #fff;
+}
+
+/* Phần tiêu đề của bảng */
+
+.cart-table thead th {
+  text-align: left;
+  padding: 16px 24px;
+  background-color: #f8f9fa;
+  color: #0d4980;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Căn giữa cho các cột không phải sản phẩm */
+.cart-table thead th:not(:first-child) {
+  text-align: center;
+}
+
+/* Phần thân bảng */
+.cart-table tbody td {
+  padding: 20px 24px;
+  vertical-align: middle; /* Căn giữa các item theo chiều dọc */
+  border-bottom: 1px solid #dee2e6;
+}
+
+.cart-table tbody tr:last-child td {
+  border-bottom: none; /* Bỏ border cho dòng cuối */
+}
+
+/* Chi tiết sản phẩm */
+.shopping-left .product-item {
+  display: flex;
+  align-items: center;
+}
+
+.remove-btn {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #083660;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #083660;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  transition: all 0.3s;
+  padding: 10px;
+}
+
+.remove-btn:hover {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Hiển thị ảnh vừa vặn */
+  margin-right: 20px;
+}
+
+.product-details a {
+  text-decoration: none;
+  color: #0d4980;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.product-details a:hover {
+  text-decoration: underline;
+}
+
+/* Giá tiền */
+.price {
+  color: #dc3545;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap; /* Không xuống dòng */
+}
+
+/* Bộ chọn số lượng */
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.quantity-selector button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.quantity-selector input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+  padding: 8px 0;
+  font-size: 16px;
+  -moz-appearance: textfield; /* Tắt mũi tên mặc định trên Firefox */
+}
+
+/* Tắt mũi tên mặc định trên Chrome, Safari, Edge */
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* shopping-left */
+.cart-summary {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px; /* Chiều rộng tối đa của khung */
+}
+
+.cart-summary-header {
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.cart-summary-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d4980; /* Màu xanh đậm */
+  margin: 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between; /* Đẩy 2 item về 2 phía */
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.summary-row span {
+  color: #333;
+}
+
+.summary-row .price {
+  font-weight: 600;
+  color: #dc3545; /* Màu đỏ */
+}
+
+.checkout-btn {
+  background-color: #0d4980;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 14px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: #ef6b6b;
+}
+
+.coupon-section {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d4980;
+  margin-bottom: 10px;
+}
+
+/* Icon cái mác */
+.coupon-section .fa-tag {
+  margin-right: 8px;
+  color: #0d4980;
+}
+
+.coupon-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Quan trọng để padding không làm tăng width */
+}
+
+.coupon-input::placeholder {
+  color: #adb5bd;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #adb5bd; /* Màu xám nhạt */
+  cursor: not-allowed; /* Con trỏ thể hiện nút bị vô hiệu hóa */
+  text-align: center;
+}
+
+/* Dùng sibling selector (+) để chọn nút bấm ngay sau input */
+/* Khi input KHÔNG còn hiển thị placeholder (tức là đã có chữ) */
+.coupon-input:not(:placeholder-shown) + .apply-btn {
+  background-color: #0d4980;
+  color: #ffffff;
+  border-color: #007bff;
+  /* Dù đổi con trỏ, nhưng nút vẫn không bấm được nếu có 'disabled' */
+  cursor: pointer;
+}
+.return-top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #fff;
+  width: 200px;
+  padding: 14px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #0d4980;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.return-top:hover {
+  background: #ef6b6b;
+  color: #fff;
 }

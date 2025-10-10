@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Laptop.VN</title>
+    <title>Detail Laptop.VN</title>
     <!-- Reset Css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -51,7 +51,7 @@
             <div class="vertical"></div>
             <div class="icons-header">
               <a href="#!"><i class="fa-regular fa-heart"></i></a>
-              <a href="shopping-cart.html"
+              <a href="shopping-cart.html" class="active"
                 ><i class="fa-solid fa-bag-shopping"></i
               ></a>
             </div>
@@ -71,106 +71,165 @@
                 <i class="fa-solid fa-chevron-down"></i>
               </a>
             </li>
-            <li><a href="contact.html" class="active">Liên Hệ</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- Contact -->
-    <section class="contact-form">
+    <!-- Shopping Cart -->
+    <section class="shopping-cart">
       <div class="container">
-        <div class="contact-form-inner">
-          <!-- contact-left -->
-          <div class="contact-left">
-            <h2>Bạn cần giúp gì không?</h2>
-            <p class="desc">
-              Cho dù bạn có thắc mắc về sản phẩm, thành phần, giá cả hay bất kỳ
-              điều gì khác, nhóm của chúng tôi đều có câu trả lời.
-            </p>
-            <div class="contact-address">
-              <div class="left">
-                <h3>Địa Chỉ</h3>
-                <p>613 Âu Cơ, Phường Tân Phú, Thành Phố Hồ Chí Minh</p>
+        <div class="shopping-inner">
+          <!-- Left -->
+          <div class="shopping-left">
+            <a href="shop.html" class="return-top">
+              <i class="fa-solid fa-circle-left"></i>
+              <span>Quay lại cửa hàng</span>
+            </a>
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th>Sản phẩm</th>
+                  <th>Giá</th>
+                  <th>Số lượng</th>
+                  <th>Tạm tính</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="product-row">
+                  <td>
+                    <div class="product-item">
+                      <button class="remove-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                      <img
+                        src="./assets/img/best-deal/HP-OmniBook-X-Flip-14-2-in-1-Next-Gen-AI-2025.jpg"
+                        alt="HP OmniBook X Flip"
+                        class="product-image"
+                      />
+                      <div class="product-details">
+                        <a href="detail.html">HP OmniBook X Flip</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price product-price">42.990.000₫</div>
+                  </td>
+                  <td>
+                    <div class="quantity-selector">
+                      <button class="qt-minus">-</button>
+                      <input type="number" class="qt-input" value="1" min="1" />
+                      <button class="qt-plus">+</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price product-subtotal">42.990.000₫</div>
+                  </td>
+                </tr>
+
+                <tr class="product-row">
+                  <td>
+                    <div class="product-item">
+                      <button class="remove-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+
+                      <img
+                        src="./assets/img/best-deal/Dell-Pro-Max-14.png"
+                        alt="Dell Pro Max 14"
+                        class="product-image"
+                      />
+                      <div class="product-details">
+                        <a href="detail.html">Dell Pro Max 14</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price product-price">33.690.000₫</div>
+                  </td>
+                  <td>
+                    <div class="quantity-selector">
+                      <button class="qt-minus">-</button>
+                      <input type="number" class="qt-input" value="1" min="1" />
+                      <button class="qt-plus">+</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price product-subtotal">33.690.000₫</div>
+                  </td>
+                </tr>
+
+                <tr class="product-row">
+                  <td>
+                    <div class="product-item">
+                      <button class="remove-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                      <img
+                        src="./assets/img/best-deal/ThinkPad-E14-Gen-7-14-inch-2025-1.jpg"
+                        alt="ThinkPad E14 Gen 7"
+                        class="product-image"
+                      />
+                      <div class="product-details">
+                        <a href="detail.html">ThinkPad E14 Gen 7</a>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price product-price">28.990.000₫</div>
+                  </td>
+                  <td>
+                    <div class="quantity-selector">
+                      <button class="qt-minus">-</button>
+                      <input type="number" class="qt-input" value="1" min="1" />
+                      <button class="qt-plus">+</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price product-subtotal">28.990.000₫</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Right -->
+          <div class="shopping-right">
+            <div class="cart-summary">
+              <div class="cart-summary-header">
+                <h3 class="cart-summary-title">Tổng cộng giỏ hàng</h3>
               </div>
-              <div class="right">
-                <p class="phone">(+84)-1800-33358</p>
-                <p class="email">support@example.com</p>
+
+              <div class="summary-details">
+                <div class="summary-row">
+                  <span>Tạm tính</span>
+                  <span class="price" id="summary-subtotal">105.670.000₫</span>
+                </div>
+                <div class="summary-row">
+                  <span><strong>Tổng</strong></span>
+                  <span class="price" id="summary-total"
+                    ><strong>105.670.000₫</strong></span
+                  >
+                </div>
               </div>
-            </div>
-            <!-- Sale Hours -->
-            <div class="sale-hours">
-              <div class="left">
-                <h3>Giờ Sale</h3>
-                <p class="day">Thứ 2 - Thứ 6</p>
-                <p class="hours-h">9h00 - 17h00</p>
+
+              <button class="checkout-btn">Tiến hành thanh toán</button>
+
+              <div class="coupon-section">
+                <i class="fas fa-tag"></i> <span>Mã ưu đãi</span>
               </div>
-              <div class="right">
-                <h3>Giờ Hỗ Trợ</h3>
-                <p class="day">Thứ 2 - Chủ Nhật</p>
-                <p class="hours-h">8h00 - 22h00</p>
-              </div>
-            </div>
-            <!-- Follow -->
-            <div class="follow">
-              <h3>Theo dõi trên các nền tảng MXH</h3>
-              <div class="social">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-square-instagram"></i>
-              </div>
+
+              <hr
+                style="border: none; border-top: 1px solid #e9ecef; margin-bottom: 20px;"
+              />
+
+              <input
+                type="text"
+                placeholder="Nhập mã giảm giá"
+                class="coupon-input"
+              />
+              <button class="apply-btn">Áp dụng</button>
             </div>
           </div>
-          <!--  -->
-          <div class="vertical"></div>
-          <!-- Contact-right -->
-          <div class="contact-right">
-            <h2>Gửi tin nhắn cho chúng tôi</h2>
-            <form action="" class="send-message">
-              <div class="name">
-                <input
-                  type="text"
-                  class="your-name"
-                  placeholder="Nhập Tên Của Bạn"
-                  name=""
-                  id=""
-                />
-              </div>
-              <div class="email-number">
-                <input
-                  type="text"
-                  name=""
-                  class="email"
-                  placeholder="Nhập Email Của Bạn"
-                  id=""
-                />
-                <input
-                  type="text"
-                  name=""
-                  class="number"
-                  placeholder="Nhập Số Điện Thoại Của Bạn"
-                  id=""
-                />
-              </div>
-              <textarea
-                name=""
-                id=""
-                placeholder="Nhập Tin Nhắn Của Bạn Vào Đây..."
-              ></textarea>
-              <button>Gửi Tin Nhắn</button>
-            </form>
-          </div>
-        </div>
-        <div class="gg-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.35268112713!2d106.63880237454046!3d10.784276989365008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fe7efcecbd5%3A0xb4734cea965dd333!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBWxINuIEhp4bq_bg!5e0!3m2!1svi!2s!4v1759653051077!5m2!1svi!2s"
-            width="100%"
-            height="450"
-            style="border:0; border-radius: 4px;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
         </div>
       </div>
     </section>
@@ -407,4 +466,5 @@
   </body>
   <script src="./assets/js/script2.js"></script>
   <script src="./assets/js/login.js"></script>
+  <script src="./assets/js/shopping-cart.js"></script>
 </html>
