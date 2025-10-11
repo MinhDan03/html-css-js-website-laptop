@@ -51,10 +51,12 @@ button {
 .header-inner .link-logo {
   display: inline-block;
   width: 300px;
+  height: 107px;
 }
 .header-inner .link-logo .logo {
   display: inline-block;
   width: 300px;
+  height: 107px;
   cursor: pointer;
 }
 .header-inner .search-product {
