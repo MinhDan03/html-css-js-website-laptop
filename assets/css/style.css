@@ -285,18 +285,18 @@ nav {
   -webkit-line-clamp: 2;
   color: #0d4980;
 }
-.total .price {
+.total .price-sp-sale {
   display: flex;
   align-items: center;
   gap: 20px;
   padding-bottom: 10px;
 }
-.total .price .original {
+.total .price-sp-sale .original {
   color: #ef6b6b;
   font-weight: 900;
   font-size: 18px;
 }
-.total .price .sale {
+.total .price-sp-sale .sale {
   color: #999;
   text-decoration: line-through;
   font-size: 15px;
@@ -310,6 +310,7 @@ nav {
   padding-bottom: 15px;
   padding-left: 40px;
 }
+
 .rating .star i {
   color: #ff7020;
 }
@@ -851,29 +852,31 @@ footer {
 .like-new .stock span {
   font-weight: 400;
 }
-.detail-right-content .price {
+.detail-right-content .price-dt {
   background: #eeeeef;
   padding: 10px 0px 10px 10px;
   border-radius: 5px;
   margin: 20px 0;
 }
-.price .original {
+.price-dt .original {
   color: #999999;
   margin-bottom: 5px;
   font-size: 1.8rem;
 }
-.price .original span {
+.price-dt .original span {
   text-decoration: line-through;
   font-size: 1.6rem;
+  display: inline;
 }
-.price .sale {
+.price-dt .sale {
   color: #999999;
   font-size: 1.8rem;
 }
-.price .sale span {
+.price-dt .sale span {
   color: red;
   font-size: 2rem;
   font-weight: 600;
+  display: inline;
 }
 .desc-detail {
   border-radius: 8px;
@@ -1026,6 +1029,9 @@ b {
   font-weight: 400;
 }
 /* Related Products */
+.total-detail {
+  padding-left: 20px;
+}
 .related-products {
   background: #fff;
   border-radius: 8px;
@@ -1235,7 +1241,7 @@ span {
 .item-desc .star i {
   color: #ff7020;
 }
-.item-desc .price {
+.item-desc .price-pd-sale {
   color: #ef6b6b;
   font-weight: 600;
 }
